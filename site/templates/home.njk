@@ -31,16 +31,11 @@
                 </section>
             </site-header>
 
-            <main>
-                <h1>{{ Title }}</h1>
-                {% if LastUpdated %}
-                    <p class="last-updated">
-                        <strong>Last updated:</strong>
-                        <time>
-                            {{ LastUpdated }}
-                        </time>
-                    </p>
-                {% endif %}
+            <main class="home">
+                <section class="hero">
+                    <h1>Jereme Evans</h1>
+                    <h2>Software Craftsman</h2>
+                </section>
                 {{ Contents | safe }}
             </main>
 

@@ -3,6 +3,10 @@
   width: 100%;
   max-width: 660px;
 
+  &.home {
+    max-width: 100%;
+  }
+
   > p,
   ul > li,
   ol > li,

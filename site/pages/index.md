@@ -1,5 +1,4 @@
 ---
 title: Jereme Evans
+template: home
 ---
-
-Home, home on the range...
