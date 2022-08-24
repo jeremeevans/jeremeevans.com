@@ -1,7 +1,7 @@
 {
-  "name": "taprootstarter",
+  "name": "jeremeevans.com",
   "version": "1.0.0",
-  "description": "Template for creating a website based on Taproot IO",
+  "description": "Jereme Evans' Personal Website",
   "type": "module",
   "scripts": {
     "build": "rimraf dist && rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
@@ -12,19 +12,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeremeevans/TaprootStarter.git"
+    "url": "git+https://github.com/jeremeevans/jeremeevans.com.git"
   },
   "keywords": [
-    "Static",
-    "website",
-    "template"
+    "Software Engineer",
+    "Personal Site"
   ],
   "author": "Jereme Evans",
-  "license": "MIT",
+  "license": "CC-BY-NC-SA",
   "bugs": {
-    "url": "https://github.com/jeremeevans/TaprootStarter/issues"
+    "url": "https://github.com/jeremeevans/jeremeevans.com/issues"
   },
-  "homepage": "https://github.com/jeremeevans/TaprootStarter#readme",
+  "homepage": "https://github.com/jeremeevans/jeremeevans.com#readme",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^13.3.0",

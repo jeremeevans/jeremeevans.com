@@ -1,5 +1,5 @@
 ---
-title: About
+title: About Me
 ---
 
-This is the starter pack!
+Howdy! Welso
