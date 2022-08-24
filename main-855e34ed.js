@@ -371,4 +371,8 @@ svg {
         ></menu-button>
       </header>
     `}openNav(){this.menuOpen=!0,document.body.classList.add("menu-open");}closeNav(){this.menuOpen=!1,document.body.classList.remove("menu-open");}};ut.styles=lt,t([ot()],ut.prototype,"menuOpen",void 0),ut=t([it("site-header")],ut);
-//# sourceMappingURL=main-9ff1c91e.js.map
+
+window.onload = () => {
+    document.body.classList.add("loaded");
+};
+//# sourceMappingURL=main-855e34ed.js.map
