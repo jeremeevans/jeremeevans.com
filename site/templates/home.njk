@@ -8,24 +8,52 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="msapplication-TileColor" content="#ffc40d">
         <meta name="theme-color" content="#ffffff">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>{{ Title }}</title>
+
+        <style>
+            body {
+                transition: opacity ease-in 500ms;
+            }
+            body.loading {
+                opacity: 0;
+            }
+            body.loading.loaded {
+                opacity: 100;
+            }
+        </style>
+
+        {{ Scripts | safe }}
+        <!-- Load the scripts first because they contain our css... -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,600&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-            rel="stylesheet"> {{ Links | safe }}
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Lora:ital,wght@0,600;1,600&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        <!-- Google fonts... -->
+
+        {{ Links | safe }}
+        <!-- These will only exist for CSS that is parsed directly by rollup and not imported in TypeScript -->
     </head>
-    <body>
+    <body class="loading">
         <div class="layout">
-            <site-header>
-                <a href="/" class="header-title" slot="site-name">
-                    <h1>Jereme Evans</h1>
+            <site-header height="60px">
+                <a aria-label="jeremeevans.com homepage" href="/" class="header-title logo" slot="site-name">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="90px" height="75px" viewbox="0 0 225.99 206.25">
+                        <path
+                            class="fill"
+                            d="M127.49,112.81c6.15,14.83,11.97,28.9,15.76,44.71,.8,1.56,2.49,2.46,4.24,2.32,17.42-1.31,34.81-2.89,52.24-3.88,6.53,.94,11.85,8.59,18.18,15.59,2.72,3.28-.32,8.12-4.45,7.12-20.32-4.94-40.98-8.49-61.81-11.25-13.06-4.06-6.56,33.89-43.42,34.74-60.84-.54-64.74-32.34-93.14-75.87-6.13-8.36-13.8-16.64-9.63-27.64C13.63,43.41,75.3,29.25,121.61,17.58c20-5.19,39.67-11.46,60.47-12.65,3.78-.52,4.81,1.29,6.1,4.27,4.3,9.54,8.56,19.23,13.36,28.55,2.77,12.39-15.58,2.7-21.43,2.41-25.17-5.03-51.98-5.75-77.48-2.69-17.78,4.31-36.04,9.41-52.77,16.53C30.17,62.06-2.31,95.37,12.13,116.55c8.49,10.84,15.27,22.83,23.44,33.91,17.25,20.47,35.12,42.04,63.88,45,15.61,2.85,45.53-7.41,36.39-27.35-15.96-35.01-36.36-69.64-36.16-109.19-.67-2.12,20.24-17.11,20.28-4.99-3.72,17.23,.58,33.91,4.22,50.76,.12,.59,1.43,1.55,1.92,1.42,14.83-3.82,29.62-7.76,44.44-11.61,4.97,1.02,10.72,10.09,15.23,13.51,2.94,2.97,.49,8.01-3.66,7.51-18.22-2.19-37-7.3-54.52-2.82-.08-.18-.17-.36-.25-.53l-.27,.2c.14,.14,.27,.29,.41,.43Z"/>
+                    </svg>
                 </a>
                 <section class="nav-links" slot="nav-links">
+                    <a class="home logo" href="/" aria-label="Home link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="90px" height="75px" viewbox="0 0 225.99 206.25">
+                            <path
+                                class="fill"
+                                d="M127.49,112.81c6.15,14.83,11.97,28.9,15.76,44.71,.8,1.56,2.49,2.46,4.24,2.32,17.42-1.31,34.81-2.89,52.24-3.88,6.53,.94,11.85,8.59,18.18,15.59,2.72,3.28-.32,8.12-4.45,7.12-20.32-4.94-40.98-8.49-61.81-11.25-13.06-4.06-6.56,33.89-43.42,34.74-60.84-.54-64.74-32.34-93.14-75.87-6.13-8.36-13.8-16.64-9.63-27.64C13.63,43.41,75.3,29.25,121.61,17.58c20-5.19,39.67-11.46,60.47-12.65,3.78-.52,4.81,1.29,6.1,4.27,4.3,9.54,8.56,19.23,13.36,28.55,2.77,12.39-15.58,2.7-21.43,2.41-25.17-5.03-51.98-5.75-77.48-2.69-17.78,4.31-36.04,9.41-52.77,16.53C30.17,62.06-2.31,95.37,12.13,116.55c8.49,10.84,15.27,22.83,23.44,33.91,17.25,20.47,35.12,42.04,63.88,45,15.61,2.85,45.53-7.41,36.39-27.35-15.96-35.01-36.36-69.64-36.16-109.19-.67-2.12,20.24-17.11,20.28-4.99-3.72,17.23,.58,33.91,4.22,50.76,.12,.59,1.43,1.55,1.92,1.42,14.83-3.82,29.62-7.76,44.44-11.61,4.97,1.02,10.72,10.09,15.23,13.51,2.94,2.97,.49,8.01-3.66,7.51-18.22-2.19-37-7.3-54.52-2.82-.08-.18-.17-.36-.25-.53l-.27,.2c.14,.14,.27,.29,.41,.43Z"/>
+                        </svg>
+                    </a>
                     <a href="/articles">Articles</a>
                     <a href="/about">About</a>
                 </section>
@@ -34,7 +62,8 @@
             <main class="home">
                 <section class="hero">
                     <h1>Jereme Evans</h1>
-                    <h2>Software Craftsman</h2>
+                    <split-flap message="Software
+Craftsman"></split-flap>
                 </section>
                 {{ Contents | safe }}
             </main>
@@ -56,7 +85,5 @@
                 <div>&nbsp;</div>
             </section>
         </div>
-
-        {{ Scripts | safe }}
     </body>
 </html>

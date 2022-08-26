@@ -20,9 +20,9 @@ Great! Our engineers now have to install fewer tools. That's a big win! In addit
 
 Recently I wanted to build a web component using [Lit](https://lit.dev/). When setting up a new project, I have the following requirements:
 
-Create no local dependencies on my computer.
-Use TypeScript.
-Minimize the number of dependencies the codebase requires.
-Write tests to ensure things work as expected.
+* Create no local dependencies on my computer.
+* Use TypeScript.
+* Minimize the number of dependencies the codebase requires.
+* Write tests to ensure things work as expected.
 
 I created a project that opens in a development container to meet those requirements; if you want to know how that container works, [learn more here](https://github.com/jeremeevans/LitDevContainer).

@@ -47,4 +47,26 @@ html:root {
     var(--primary-saturation),
     80%
   );
+
+  --split-flap-font-color: var(--color-primary-darkest);
+  --split-flap-font-weight: bold;
+  --split-flap-font-size: 25px;
+  --split-flap-font-family: "Courier Prime", monospace;
+  --split-flap-padding: 6px;
+  --split-flap-border-radius: 4px;
+  --split-flap-background: url(/assets/az-subtle.png)
+    var(--color-secondary-lightest);
+  --split-flap-separator: 1px solid var(--color-secondary-light);
+
+  @media (min-width: 500px) {
+    --split-flap-font-size: 30px;
+  }
+
+  @media (min-width: 768px) {
+    --split-flap-font-size: 50px;
+  }
+
+  @media (min-width: 1024px) {
+    --split-flap-font-size: 70px;
+  }
 }
