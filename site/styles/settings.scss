@@ -57,6 +57,8 @@ html:root {
   --split-flap-background: url(/assets/az-subtle.png)
     var(--color-secondary-lightest);
   --split-flap-separator: 1px solid var(--color-secondary-light);
+  --split-flap-back-background: url(https://www.transparenttextures.com/patterns/arches.png)
+    var(--color-primary-dark);
 
   @media (min-width: 500px) {
     --split-flap-font-size: 30px;

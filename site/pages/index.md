@@ -1,4 +1,4 @@
 ---
-title: Jereme Evans
+title: Software Craftsman
 template: home
 ---

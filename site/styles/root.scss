@@ -81,10 +81,7 @@ section.hero {
   h1 {
     margin: 0;
     color: var(--color-primary-light);
-    text-shadow: 2px 2px 2px var(--color-secondary-darkest);
-  }
-
-  h1 {
+    text-shadow: 2px 4px 4px var(--color-secondary-darkest);
     align-self: flex-end;
     font-size: 2.4em;
 
@@ -145,14 +142,14 @@ section.nav-links {
 
     &:hover {
       color: var(--color-secondary);
-      text-shadow: 2px 2px 0 var(--color-secondary-darkest);
+      text-shadow: 2px 4px 4px var(--color-secondary-darkest);
     }
   }
 }
 
 a.logo {
   svg {
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    filter: drop-shadow(3px 6px 4px rgb(0 0 0 / 0.4));
 
     .fill {
       fill: var(--color-secondary-light);
