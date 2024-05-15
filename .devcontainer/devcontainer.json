@@ -15,6 +15,12 @@
 
   "runArgs": ["--name=jeremeevans.com"],
 
+  "postCreateCommand": "npm install",
+
+  "postStartCommand": "nohup bash -c 'npm run dev &'",
+
+  // "overrideCommand": false,
+
   // Configure tool-specific properties.
   "customizations": {
     // Configure properties specific to VS Code.
